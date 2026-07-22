@@ -4,6 +4,8 @@ synopsis:            Haskell bindings for SDL3_Mixer
 author:              Axis Sivitz
 maintainer:          aosivitz@gmail.com
 copyright:           2026 Axis Sivitz
+license:             BSD-3-Clause
+license-file:        LICENSE
 
 ghc-options: -Wall -Werror=incomplete-patterns -Wunused-packages -Werror=unused-packages
 
