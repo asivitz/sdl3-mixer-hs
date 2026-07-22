@@ -15,6 +15,7 @@ module SDL.Mixer.Raw
   , mixSetTrackFrequencyRatio
   , mixSetTrackGain
   , loadAudio
+  , mixPropPlayLoopsNumber
   ) where
 
 import Foreign
@@ -82,3 +83,6 @@ loadAudio
 loadAudio mixer path predecode =
   withCString path \cstr ->
     mixLoadAudio mixer cstr predecode
+
+mixPropPlayLoopsNumber :: String
+mixPropPlayLoopsNumber = "SDL_mixer.play.loops"
