@@ -1,0 +1,42 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.38.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           sdl3-mixer
+version:        0.1.0.0
+synopsis:       Haskell bindings for SDL3_Mixer
+author:         Axis Sivitz
+maintainer:     aosivitz@gmail.com
+copyright:      2026 Axis Sivitz
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+
+flag pkgconfig
+  description: Use pkgconfig to resolve SDL3_mixer dependency
+  manual: True
+  default: True
+
+library
+  exposed-modules:
+      SDL.Mixer.Raw
+  other-modules:
+      Paths_sdl3_mixer
+  autogen-modules:
+      Paths_sdl3_mixer
+  hs-source-dirs:
+      src
+  default-extensions:
+      BlockArguments
+  ghc-options: -Wall -Werror=incomplete-patterns -Wunused-packages -Werror=unused-packages
+  include-dirs:
+      SDL_mixer/include/SDL3_mixer/
+  build-depends:
+      base
+  if flag(pkgconfig)
+    pkgconfig-depends:
+        sdl3 >=3.4.0
+      , sdl3-mixer >=3.2.4
+  default-language: GHC2021
