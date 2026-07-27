@@ -14,8 +14,10 @@ module SDL.Mixer.Raw
   , mixPlayTrack
   , mixSetTrackFrequencyRatio
   , mixSetTrackGain
+  , mixSetMixerGain
   , loadAudio
   , mixPropPlayLoopsNumber
+  , mixStopAllTracks
   ) where
 
 import Foreign
@@ -73,6 +75,18 @@ foreign import ccall unsafe "MIX_SetTrackGain"
   mixSetTrackGain
     :: Ptr MIX_Track
     -> CFloat
+    -> IO Bool
+
+foreign import ccall unsafe "MIX_SetMixerGain"
+  mixSetMixerGain
+    :: Ptr MIX_Mixer
+    -> CFloat
+    -> IO Bool
+
+foreign import ccall unsafe "MIX_StopAllTracks"
+  mixStopAllTracks
+    :: Ptr MIX_Mixer
+    -> CLong
     -> IO Bool
 
 loadAudio
