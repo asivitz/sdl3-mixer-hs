@@ -39,4 +39,7 @@ library
     pkgconfig-depends:
         sdl3 >=3.4.0
       , sdl3-mixer >=3.2.4
+  extra-libraries:
+      SDL3
+      SDL3_mixer
   default-language: GHC2021

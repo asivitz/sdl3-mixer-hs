@@ -33,6 +33,9 @@ library:
   exposed-modules: 
     - SDL.Mixer.Raw
   dependencies: []
+  extra-libraries:
+    - SDL3
+    - SDL3_mixer
 
 flags:
   pkgconfig:
