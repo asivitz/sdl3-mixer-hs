@@ -27,14 +27,12 @@ library:
 
   c-sources: []
 
-  include-dirs:
-    SDL_mixer/include/SDL3_mixer/
+  include-dirs: []
 
   exposed-modules: 
     - SDL.Mixer.Raw
   dependencies: []
   extra-libraries:
-    - SDL3
     - SDL3_mixer
 
 flags:

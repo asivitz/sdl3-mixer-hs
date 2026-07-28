@@ -31,8 +31,6 @@ library
   default-extensions:
       BlockArguments
   ghc-options: -Wall -Werror=incomplete-patterns -Wunused-packages -Werror=unused-packages
-  include-dirs:
-      SDL_mixer/include/SDL3_mixer/
   build-depends:
       base
   if flag(pkgconfig)
@@ -40,6 +38,5 @@ library
         sdl3 >=3.4.0
       , sdl3-mixer >=3.2.4
   extra-libraries:
-      SDL3
       SDL3_mixer
   default-language: GHC2021
